@@ -44,6 +44,9 @@ def display_number_of_lives(num_lives):
 
 
 def game_won(hangman_word):
-    print("You Win!, you guessed the word", hangman_word.create_printable_player_word(), "in time!")
+    print("You Win! you guessed the word", hangman_word.create_printable_player_word(), "in time!")
 
 
+def game_lost(hangman_word):
+    print("You Lose! Sorry you didn't manage to guess the word in time. The word was",
+          hangman_word.create_printable_hidden_word())
