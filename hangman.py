@@ -2,10 +2,10 @@ import utils
 import interaction
 import store
 
-num_lives = len(store.ascii_man)
+num_lives = len(store.ascii_man)-1
 
 interaction.welcome()
-play_again=True
+play_again = True
 
 while play_again:
     # Pick hidden word and initialise

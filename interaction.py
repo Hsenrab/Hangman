@@ -1,13 +1,18 @@
 import utils
 import store
-from termcolor import colored
+import colorama
+
 
 def welcome():
+    print(colorama.Fore.MAGENTA)
     print("Welcome to Hangman")
     print("What is your name?")
     name = input()
     print("Hello", name)
+
+    print(colorama.Fore.CYAN)
     print("Let's begin:")
+    print(colorama.Style.RESET_ALL)
 
 
 def display_length(hangman_word):
@@ -49,7 +54,10 @@ def letter_incorrect(letter):
 
 
 def display_noose(num_lives):
-    print(store.ascii_man[-num_lives])
+    print(store.life_colour[num_lives])
+    ascii_man_index = len(store.ascii_man) - (num_lives+1)
+    print(store.ascii_man[ascii_man_index])
+    print(colorama.Style.RESET_ALL)
 
 
 def display_number_of_lives(num_lives):

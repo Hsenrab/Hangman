@@ -1,3 +1,5 @@
+import colorama
+
 word_options = ["lunch",
                 "potato",
                 "spider",
@@ -102,3 +104,14 @@ ascii_man = [
           / \  |
                |
          =========''']
+
+life_colour = [colorama.Fore.RED,
+               colorama.Fore.RED,
+               colorama.Fore.MAGENTA,
+               colorama.Fore.MAGENTA,
+               colorama.Fore.BLUE,
+               colorama.Fore.BLUE,
+               colorama.Fore.CYAN,
+               colorama.Fore.CYAN,
+               colorama.Fore.GREEN,
+               colorama.Fore.GREEN]
