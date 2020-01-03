@@ -1,5 +1,10 @@
-print("Welcome to Hangman")
-print("What is your name?")
-name = input()
-print("Hello", name)
-print("Let's begin")
+import utils
+import interaction
+
+
+interaction.welcome()
+
+
+word = utils.pick_word()
+
+interaction.display_length(word)
