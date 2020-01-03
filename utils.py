@@ -8,6 +8,16 @@ def pick_word():
     return chosen_word
 
 
+def is_input_single_letter(input_letter):
+    input_as_list = list(input_letter)
+    num_letters = len(input_as_list)
+
+    if num_letters != 1 or not input_as_list[0].isalpha():
+        return False
+    else:
+        return True
+
+
 class HangmanWord:
     def __init__(self, word):
         self.hidden_word = list(word)
