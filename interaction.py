@@ -1,4 +1,4 @@
-
+import utils
 
 def welcome():
     print("Welcome to Hangman")
@@ -23,10 +23,16 @@ def ask_player_for_letter(hangman_word):
         print("Please choose a letter")
         letter = input()
 
-        if not hangman_word.has_letter_been_tried(letter):
-            valid_letter_given = True
+        if utils.is_input_single_letter(letter):
+            letter = letter.lower()
+
+            if not hangman_word.has_letter_been_tried(letter):
+                valid_letter_given = True
+            else:
+                print("You have already tried that letter")
+                valid_letter_given = False
         else:
-            print("You have already tried that letter")
+            print("Input given must be single letter A-Z")
 
     return letter
 
