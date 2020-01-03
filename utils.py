@@ -19,3 +19,15 @@ class HangmanWord:
             print_string = print_string + char + " "
 
         return print_string
+
+    def is_letter_correct(self, letter):
+        letter_found = False
+
+        for index, char in enumerate(self.hidden_word):
+            if char == letter:
+                letter_found = True
+                self.player_word[index] = letter
+
+        return letter_found
+
+
