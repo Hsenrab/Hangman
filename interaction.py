@@ -32,7 +32,7 @@ def ask_player_for_letter(hangman_word):
 
 
 def letter_correct(letter):
-    print("Yes!,", letter, "is in my word")
+    print("Yes!", letter, "is in my word")
 
 
 def letter_incorrect(letter):
@@ -41,3 +41,9 @@ def letter_incorrect(letter):
 
 def display_number_of_lives(num_lives):
     print("You have", num_lives, "lives remaining")
+
+
+def game_won(hangman_word):
+    print("You Win!, you guessed the word", hangman_word.create_printable_player_word(), "in time!")
+
+

@@ -35,4 +35,7 @@ class HangmanWord:
     def has_letter_been_tried(self, letter):
         return letter in self.letters_tried
 
+    def is_word_complete(self):
+        return self.hidden_word == self.player_word
+
 

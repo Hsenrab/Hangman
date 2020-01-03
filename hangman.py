@@ -13,7 +13,6 @@ interaction.display_length(hangman_word)
 interaction.display_player_word(hangman_word)
 interaction.display_number_of_lives(num_lives)
 
-
 while num_lives > 0:
     # Ask player for a letter
     letter = interaction.ask_player_for_letter(hangman_word)
@@ -23,6 +22,9 @@ while num_lives > 0:
 
     if is_correct:
         interaction.letter_correct(letter)
+
+        if hangman_word.is_word_complete():
+            break
     else:
         num_lives = num_lives - 1
         interaction.letter_incorrect(letter)
@@ -30,3 +32,6 @@ while num_lives > 0:
     interaction.display_player_word(hangman_word)
     interaction.display_number_of_lives(num_lives)
 
+
+if hangman_word.is_word_complete():
+    interaction.game_won(hangman_word)
