@@ -1,4 +1,6 @@
 import utils
+import store
+from termcolor import colored
 
 def welcome():
     print("Welcome to Hangman")
@@ -13,7 +15,8 @@ def display_length(hangman_word):
 
 
 def display_player_word(hangman_word):
-    print("Current state: ", hangman_word.create_printable_player_word())
+    print("        ", hangman_word.create_printable_player_word())
+    print("")
 
 
 def ask_player_for_letter(hangman_word):
@@ -45,8 +48,13 @@ def letter_incorrect(letter):
     print("Sorry", letter, "is not in my word")
 
 
+def display_noose(num_lives):
+    print(store.ascii_man[-num_lives])
+
+
 def display_number_of_lives(num_lives):
     print("You have", num_lives, "lives remaining")
+    display_noose(num_lives)
 
 
 def game_won(hangman_word):
@@ -78,4 +86,8 @@ def ask_if_play_again():
 
 def goodbye():
     print("Thanks for playing, goodbye.")
+
+
+
+
 

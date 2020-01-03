@@ -1,7 +1,8 @@
 import utils
 import interaction
+import store
 
-num_lives = 10
+num_lives = len(store.ascii_man)
 
 interaction.welcome()
 play_again=True
@@ -12,8 +13,8 @@ while play_again:
 
     # Tell player word length
     interaction.display_length(hangman_word)
-    interaction.display_player_word(hangman_word)
     interaction.display_number_of_lives(num_lives)
+    interaction.display_player_word(hangman_word)
 
 
     while num_lives > 0:
@@ -32,9 +33,8 @@ while play_again:
             num_lives = num_lives - 1
             interaction.letter_incorrect(letter)
 
-        interaction.display_player_word(hangman_word)
         interaction.display_number_of_lives(num_lives)
-
+        interaction.display_player_word(hangman_word)
 
     if hangman_word.is_word_complete():
         interaction.game_won(hangman_word)

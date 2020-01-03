@@ -1,10 +1,10 @@
 import random
 
-import words
+import store
 
 
 def pick_word():
-    chosen_word = random.choice(words.word_options)
+    chosen_word = random.choice(store.word_options)
     return chosen_word
 
 
