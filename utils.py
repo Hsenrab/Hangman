@@ -14,6 +14,13 @@ class HangmanWord:
         self.player_word = ["_" for char in self.hidden_word]
         self.letters_tried = []
 
+    def create_printable_hidden_word(self):
+        print_string = ""
+        for char in self.hidden_word:
+            print_string = print_string + char + " "
+
+        return print_string
+
     def create_printable_player_word(self):
         print_string = ""
         for char in self.player_word:

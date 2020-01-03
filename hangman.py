@@ -35,3 +35,5 @@ while num_lives > 0:
 
 if hangman_word.is_word_complete():
     interaction.game_won(hangman_word)
+else:
+    interaction.game_lost(hangman_word)
