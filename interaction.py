@@ -16,9 +16,18 @@ def display_player_word(hangman_word):
     print("Current state: ", hangman_word.create_printable_player_word())
 
 
-def ask_player_for_letter():
-    print("Please choose a letter")
-    letter = input()
+def ask_player_for_letter(hangman_word):
+
+    valid_letter_given = False
+    while not valid_letter_given:
+        print("Please choose a letter")
+        letter = input()
+
+        if not hangman_word.has_letter_been_tried(letter):
+            valid_letter_given = True
+        else:
+            print("You have already tried that letter")
+
     return letter
 
 

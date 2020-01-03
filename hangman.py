@@ -16,7 +16,7 @@ interaction.display_number_of_lives(num_lives)
 
 while num_lives > 0:
     # Ask player for a letter
-    letter = interaction.ask_player_for_letter()
+    letter = interaction.ask_player_for_letter(hangman_word)
 
     # Determine if letter is correct
     is_correct = hangman_word.is_letter_correct(letter)
