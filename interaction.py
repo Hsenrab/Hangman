@@ -29,3 +29,6 @@ def letter_correct(letter):
 def letter_incorrect(letter):
     print("Sorry", letter, "is not in my word")
 
+
+def display_number_of_lives(num_lives):
+    print("You have", num_lives, "lives remaining")
